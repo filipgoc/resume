@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="yes">
+
+<title>Filip Goč | Maker,  Designer of Learning Experiences &lt;br&gt;... and 3D Printers</title>
+<style type="text/css">
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+p,
+pre {
+  margin: 1em 0;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body.pdf {
+  color: #212121;
+  zoom: 300%;
+}
+body.pdf a {
+  text-decoration: none;
+  color: #3998d1;
+}
+body.pdf .container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  background: none;
+  border: none;
+  border-width: 8px 0 2px 0;
+  text-align: left;
+}
+body.pdf .resume {
+  position: relative;
+  padding: 40px 80px;
+}
+body.pdf a[href$='.pdf'] {
+  display: none;
+}
+body.pdf h1,
+body.pdf h2,
+body.pdf h3,
+body.pdf h4 {
+  color: #3998d1;
+}
+body.pdf h1 {
+  letter-spacing: 0;
+  margin-top: 0;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+body.pdf h2 {
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: normal;
+}
+body.pdf h3 {
+  float: left;
+  width: 16%;
+  font-style: normal;
+}
+body.pdf h3+p {
+  float: left;
+  width: 78%;
+}
+body.pdf blockquote {
+  top: 40px;
+  right: 50px;
+  position: absolute;
+}
+body.pdf ul li {
+  width: 33%;
+  float: left;
+}
+body.pdf ul dl {
+  margin: 0;
+  padding: 0.3em 0 0;
+}
+body.pdf ul dl dt {
+  font-size: 122%;
+  font-weight: normal;
+  margin: 0 0 .75em;
+}
+body.pdf ul dl dd {
+  padding: 0 2em 0 0;
+  color: #212121;
+}
+body.pdf ol {
+  float: left;
+  width: 79%;
+  margin: .7em 0 0;
+}
+body.pdf ol li {
+  width: 33%;
+  margin: 0;
+}
+body.pdf ol li:nth-child(3n) {
+  width: 34%;
+}
+body.pdf ol li:nth-child(1),
+body.pdf ol li:nth-child(2),
+body.pdf ol li:nth-child(3) {
+  border-top: none;
+}
+body.pdf dl {
+  margin: .7em 0 0;
+  page-break-inside: avoid !important;
+  display: block;
+  width: 79%;
+  float: left;
+}
+body.pdf dl dd {
+  color: #212121;
+}
+body.pdf dl strong {
+  float: right;
+  margin-top: -2em;
+  color: #212121;
+}
+body.pdf dl em {
+  font-size: 130%;
+  font-style: normal;
+  color: #212121;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+body {
+  font-family: 'Hoefler Text', Times New Roman, Times, serif;
+  color: #444;
+}
+h1,
+h2,
+h3,
+h4,
+ul dl dt {
+  font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
+}
+.container {
+  margin: 0 auto;
+  padding: 0;
+  background: whiteSmoke;
+  border: solid #666;
+  border-width: 8px 0 2px 0;
+  text-align: left;
+}
+.resume {
+  position: relative;
+  padding: 10px 20px;
+}
+a {
+  color: #3998d1;
+  text-decoration: none;
+}
+a[href$='.pdf'] {
+  display: inline-block;
+  background: #666;
+  color: white;
+  padding: 6px 12px;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+blockquote {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4em;
+}
+hr {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 18px auto;
+  width: 100%;
+  clear: both;
+  border: none;
+  border-top: 1px solid #CCC;
+  font-size: 1px;
+  line-height: 0;
+  overflow: visible;
+  page-break-after: avoid;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+h3 {
+  margin: 0px 20px;
+  padding: 0 0 .5em;
+  font-size: 150%;
+  font-style: italic;
+  font-weight: normal;
+}
+h3+p {
+  margin: .6em 0 16px;
+  padding: 0;
+  display: block;
+  font-size: 100%;
+  line-height: 24px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+ul dl {
+  margin: .3em 0 0;
+  padding: 0;
+  width: 100%;
+}
+ul dl dt {
+  font-size: 100%;
+}
+ul dl dd {
+  margin: 0 0 1em;
+  padding: 0 2em 0 0;
+  font-size: .9em;
+  line-height: 1.5em;
+}
+ol {
+  margin: 0;
+  padding: 0 0 .75em;
+  width: 84%;
+  display: inline-block;
+}
+ol li {
+  margin: 0 0 0 1em;
+  padding: 0;
+  border-top: 1px solid #CCCCCC;
+  width: 100%;
+  float: left;
+  list-style: none;
+  line-height: 24px;
+  font-size: 14px;
+}
+ol li:nth-child(1) {
+  border-top: none;
+}
+dl {
+  display: inline-block;
+  width: 78%;
+  margin: 0;
+  padding: 0;
+}
+dl dt {
+  margin: 0;
+  padding: 0;
+  font-size: 140%;
+}
+dl dd {
+  margin: 0 0 1.5em;
+  padding: 0;
+  font-size: 90%;
+  line-height: 1.4em;
+}
+dl strong {
+  display: block;
+  font-weight: 600;
+  text-align: right;
+}
+dl em {
+  display: block;
+  font-size: 110%;
+  margin: .15em 0 .5em;
+  font-style: bold;
+}
+#footer {
+  display: none;
+}
+#footer + p {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media screen and (min-width: 37.5em) {
+  body {
+    padding: 2em 0;
+  }
+  blockquote {
+    top: 10px;
+    right: 50px;
+    position: absolute;
+  }
+  h1 {
+    margin-top: .5em;
+  }
+  ol {
+    margin: 0 0 0 1em;
+  }
+  ol li {
+    width: 50%;
+    margin: 0;
+  }
+  ol li:nth-child(1),
+  ol li:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 57em) {
+  .container {
+    width: 912px;
+  }
+  .resume {
+    position: relative;
+    padding: 40px 50px;
+  }
+  blockquote {
+    top: 40px;
+    right: 50px;
+    position: absolute;
+  }
+  h1 {
+    margin-top: 0;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: normal;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-weight: normal;
+  }
+  h3 {
+    float: left;
+    width: 16%;
+  }
+  h3+p {
+    float: left;
+    width: 78%;
+  }
+  ul li {
+    width: 33%;
+    float: left;
+  }
+  ul dl dt {
+    font-size: 122%;
+    font-weight: normal;
+    margin-bottom: .75em;
+  }
+  ul dl dd {
+    padding: 0 2em 0 0;
+  }
+  ol {
+    float: left;
+    width: 79%;
+    margin: .6em 0 0;
+  }
+  ol li {
+    width: 33%;
+    margin: 0;
+  }
+  ol li:nth-child(3n) {
+    width: 34%;
+  }
+  ol li:nth-child(1),
+  ol li:nth-child(2),
+  ol li:nth-child(3) {
+    border-top: none;
+  }
+  dl {
+    margin: .5em 0 0;
+  }
+  dl strong {
+    float: right;
+    margin-top: -2em;
+  }
+  dl em {
+    font-size: 130%;
+    font-style: normal;
+  }
+}
+
+</style>
+</head>
+
+<body class="">
+
+<div class="container">
+    <div class="resume">
+        <h1>Filip Goč</h1>
+
+<h2>Maker,  Designer of Learning Experiences <br>... and 3D Printers</h2>
+
+<blockquote>
+  <p><a href="filip_goc_resume.pdf">Download PDF</a><br>
+    <!-- > pdf below -->
+    <!-- > <a href="mailto:filip@imade3d.com">filip@imade3d.com</a><br> -->
+    <!-- > html below -->
+  <a href="mailto:filip@imade3d.com?subject=Hi%20Filip%20!&body=I%20am%20a%20lovely%20person,%20and%20I%20think%20we%20should%20work%20together%20on%20___">filip@imade3d.com</a><br>
+  <a href="https://www.linkedin.com/in/filipgoc">linkedin.com/in/filipgoc</a><br>
+  <a href="http://twitter.com/filipgoc">@filipgoc Twitter</a><br>
+  <a href="">+1 202 560 0358</a></p>
+</blockquote>
+
+<div style="margin-top:40px"></div>
+
+<hr />
+
+<h3 id="profile">Intro</h3>
+
+<p>I design and run learning experiences and curricula often involving modern technologies both on-line and off-line. I have also designed an award-winning 3D Printer. My approaches are steeped in cognitive science of learning, design thinking, game-inspired learning, and both constructionist and constructivist theories. I believe in curiosity, combining liberal arts with digital fabrication, and open-ended, student-centered education.<br><br>
+  I am DIY aficionado and a tinkerer, both as a professional and as a hobbyist. I like the smell of freshly cut wood and of ink laid on a paper, yet, most of the time, I make digital things. Digital photography, movie editing, sound recording, podcasts, and the like. I sometimes play with code, and it may or may not end up online.</p>
+
+<hr />
+
+<h3 id="skills">Skills</h3>
+
+<ul>
+<li><dl>
+<dt>Education &amp; Tech</dt>
+<dd>Instructional design and curriculum design, online and offline teaching, hands-on education, design thinking, constructionist learning, educational game design, MOOCs, iterative design processes.</dd>
+</dl></li>
+<li><dl>
+<dt>Media Production</dt>
+<dd>Videography, shooting and editing (Premiere Pro, Vegas, Final Cut Pro). Analog and Digital Photography (Lightroom, Photoshop). Graphics (Illustrator, InDesign, Inkscape). Audio (Audition, Audacity).</dd>
+</dl></li>
+<li><dl>
+<dt>"Making"</dt>
+<dd>3D Printer Development, RepRap, Slicing Development (Simplify3D, Cura, Clic3r, Kiri:moto), CAD (Fusion360, TinkrCAD, OpenSCAD, 123D Suite), Arduino (-Marlin), lasercutting, CNC, lathe...</dd>
+</dl></li>
+</ul>
+
+<hr />
+
+<!-- 
+### Technical {#technical}
+
+  1. Adobe Suite
+  1. Win XP/7/10
+  1. OS X
+  1. Git/Github
+  1. Wordpress
+  1. Markdown/ Pandoc
+  1. Arduino
+
+  ------ -->
+
+<h3 id="education">Education</h3>
+
+<dl>
+<dt>Harvard Graduate School of Education</dt>
+<dd><em>Master of Education: Technology, Innovation, and Education</em>
+<strong>2012-2013</strong>
+Associate of Student Advisory Board | Winner of Harvard XDesign Education Challenge</dd>
+
+<dt>University of Virginia</dt>
+<dd><em>Bachelor of Arts in Cognitive Sciences</em>
+<strong>2010-2012</strong>
+Focus in Digital Humanities, New Media, and Cognitive Psychology | Dean’s List</dd>
+
+<dt>Northern Virginia Community College</dt>
+<dd><em>Associate Degree</em>
+<strong>2009-2010</strong>
+Presidential Scholar and Dean’s List | Award of High Academic Achievement</dd>
+</dl>
+
+<p style="page-break-before: always"></p>
+
+<hr />
+
+<h3 id="projects">Projects</h3>
+
+<dl>
+<dt>IMADE3D, LLC</dt>
+<dd><em>Captain of Design and Education</em>
+<strong>2015-present</strong>
+Co-founded a startup to teach general public, teachers, and students to assemble and use DIY 3D Printers - as a learning experience. Co-designed 3D Printer "JellyBOX" from scratch, optimizing the design for ease of assembly, maintenance and learning. Prepared the design in Fusion360, AutoCAD, and Illustrator, and collaborated on setting up manufacturing in rural Virginia. Also developed the IMADE3D educational concept of Hands-on Accelerated Builds, created a DIY online documentation (OneNote, Dozuki), shot and edited instructional videos, designed the web, interfaced with partners, and managed the online community. JellyBOX has been awarded Best for Schools in 2017 by the Make Magazine.<br><a href="www.imade3d.com">www.imade3d.com</a></dd>
+
+<dt>Design 101 MOOC, Iversity</dt>
+<dd><em>Community Meta-Manager and Lead</em>
+<strong>2014</strong>
+Lead an international community of up to 40 volunteers to manage the vibrant community of 40,000 students (about 10,000 active) in Iversity's Design 101 MOOC. Imagined ways to make this technologically possible. Heavily experimented with social and communication media (Facebook, Twitter, Pinterest, Google+, Hangouts, Slack, forum, email...) to keep the students engaged.<br><a href="http://iversity.org/en/courses/design-101-or-design-basics">http://iversity.org/en/courses/design-101-or-design-basics</a></dd>
+
+<dt>Education Design Shop, MIT</dt>
+<dd><em>Co-Organizer</em>
+<strong>2014</strong>
+Together with EDS founder Jess, developed and ran a 2-day hackathon in design thinking that put together educators, students, policy makers, and designers to design educational policy. Co-designed the website and print materials, shot video interviews with 'inspiring experts' (including the Massachusetts Secretary of Education), developed scoring rubric, planned the activities... and anything else that was needed.<br><a href="http://edudesignshop.mit.edu">http://edudesignshop.mit.edu</a></dd>
+
+<dt>HyperStudio at the Massachusetts Institute of Technology</dt>
+<dd><em>Research Intern to Visualize Digital Annotations</em>
+<strong>2013</strong>
+In collaboration with HyperStudio, designed and coded interactive visualizations of users' annotations with Processing and D3.js, using annotation data from HyperStudio's Annotation studio. Additionally, outlined changes to the web application and website to streamline the UX. Presented on "Temporal Aspect of Annotating" at "Convergence @Harvard" conference.</dd>
+
+<dt>ABC Chomper EdApp, MIT</dt>
+<dd><em>Instructional &amp; UX Designer, Game Design Doc (GDD) Writer</em>
+<strong>2013</strong>
+As a member of an interdisciplinary team, developed an educational Android Game to support early literacy acquisition of Ethiopian children. Worked with literacy experts to define learning objectives and align them with the game’s design.</dd>
+</dl>
+
+<p style="page-break-before: always"></p>
+
+<hr />
+
+<h3 id="experience">Experience</h3>
+
+<dl>
+<dt>Emerson College School of Communication</dt>
+<dd><em>Senior Project Manager &amp; Educational Technology Consultant</em>
+<strong>2013-2015</strong>
+Over the course of a year, lead a cross-departmental, diverse group of faculty to re-thing and re-align the structure and programming of the entire School of Communication in the spirit of design thinking. Analysed the ed-tech space, and provided resources and activities to have the faculty explore and experience current communication and educational technology trends. Designed and managed online spaces to share findings and interact asynchronously. Run an internal mini-conference on technological trends including a design thinking workshop.</dd>
+
+<dt>Emerson College</dt>
+<dd><em>Teaching Assistant for Communication Management Capstone</em>
+<strong>2015</strong>
+Provided feedback and guidance on graduate students' final year's Communication Management projects. Managed class's Canvas site including forum and submissions and google docs integrations. Secured video recordings of sessions, and provided general IT support. Led classes on various subjects.</dd>
+
+<dt>HarvardX (Harvard branch of EdX)</dt>
+<dd><em>Comparative MOOC-ologist</em>
+<strong>2014</strong>
+A part of a team assembled to compare and contrast MOOC courses from various providers, and identify the best course design and community management practices. Produced an internal document outlining the state of the art and proposing innovative approaches to teaching online across disciplines.</dd>
+
+<dt>University of Liverpool Laureate Online Courses</dt>
+<dd><em>Instructional Designer &amp; Curriculum Writer</em>
+<strong>2013-2014</strong>
+Worked with an international team of content experts to re-design and re-write existing online courses in an MBA program to fit into a new school-wide pedagogical model aimed at increasing interactivity and students’ collaboration.</dd>
+
+<dt>HFR Veritas Education</dt>
+<dd><em>Curriculum Designer and Content Expert</em>
+<strong>2014</strong>
+Co-created curricula for after-school programs in Creative Problem Solving and Critical thinking for a local start-up in Shanghai, China. Reviewed and compiled existing literature and trends in teaching creativity. Spearheaded human-centered design practices in developing the coursework - held multiple sessions with a selection of future Chinese students to test activities and align the curriculum with the needs and expectations of the regional audience. Delivered both instructional activities for students, and teaching manual for instructors.</dd>
+
+<dt>Center for Talented Youth of Johns Hopkins University</dt>
+<dd><em>Teaching Assistant of Cognitive Psychology</em>
+<strong>2011–2012</strong>
+<!-- Los Angeles, CA Jul-Aug 2011 and 2012 -->
+Prepared and taught college level lessons on various topics of Cognitive Psychology to class of 15 gifted teenagers. Supervised students’ learning with an interactive suite of cognitive psychology experiments. Supplied students with lab report templates and critical thinking question, and provided constructive feedback on performance.</dd>
+
+<dt>CAST: Center for Applied Special Technology</dt>
+<dd><em>Product Design and Instructional Design Intern</em>
+<strong>2012</strong>
+<!-- Wakefield, MA Sep 2012-Dec 2012 -->
+Facilitated research and iterative development of the Composition Builder interactive writing environment. Helped envision the UI and UX of the annotating and peer review functionality, as well as of an adaptive student support system in accordance with the UDL (Universal Design for Learning) principles.</dd>
+
+<dt>Northern Virginia Community College Writing Center</dt>
+<dd><em>ESOL and English Writing Tutor</em>
+<strong>2010</strong>
+<!-- Annandale, VA Jan 2010-May 2010 -->
+Held one-on-one tutoring sessions with college students of all English proficiencies (including native speakers). Worked with students to improve both their grammar and writing style. Specialized on American academic writing structure and style.</dd>
+
+<dt>St. Mark ESL Program</dt>
+<dd><em>ESOL Teacher</em>
+<strong>2009-2011</strong>
+<!-- Vienna, VA Sept 2009-May 2011 -->
+Taught English for Speakers of Other Languages to a class of 20 adult learners. Prepared lesson plans, exams, and gave feedback on student work. Pioneered the incorporation of an interactive Smart Board system (Prometheus).</dd>
+</dl>
+
+<hr />
+
+<h3 id="footer">Footer</h3>
+
+<p>Filip Goč  -- <a href="filip@imade3d.com">filip@imade3d.com</a> -- +1 202 560 0358</p>
+
+<hr />
+
+    </div>
+</div>
+
+</body>
+</html>
