@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="yes">
 
 <title>Filip Goč | Designer of Learning Experiences</title>
 <style type="text/css">
@@ -287,6 +286,7 @@ body.pdf h3 {
 body.pdf h3+p {
   float: left;
   width: 78%;
+  font-size: 200%;
 }
 body.pdf blockquote {
   top: 40px;
@@ -302,7 +302,6 @@ body.pdf ul dl {
   padding: 0.3em 0 0;
 }
 body.pdf ul dl dt {
-  font-size: 160%;
   font-weight: normal;
   margin: 0 0 .75em;
 }
@@ -342,11 +341,19 @@ body.pdf dl strong {
   color: #212121;
 }
 body.pdf dl em {
-  font-size: 160%;
+  font-size: 200%;
   font-style: normal;
   color: #212121;
 }
+body.pdf ul+p,
+body.pdf dl+p,
+body.pdf dt+p {
+  font-size: 200%;
+}
 body.pdf h3#languages {
+  visibility: hidden;
+}
+body.pdf h3#hideproj {
   visibility: hidden;
 }
 body.pdf img#avatar {
@@ -359,6 +366,9 @@ body.pdf img#avatar {
 body.pdf h1,
 body.pdf h2 {
   margin-left: 20%;
+}
+body.pdf p {
+  font-size: 300%;
 }
 
 .clearfix {
@@ -374,7 +384,7 @@ body.pdf h2 {
 h3#languages {
   visibility: hidden;
 }
-h3#projects2 {
+h3#hideproj {
   visibility: hidden;
 }
 img#avatar {
@@ -658,7 +668,9 @@ dl em {
 
 <div class="container">
     <div class="resume">
-        <p><img src="filip_icon_bw_round.png" id="avatar"></p>
+        <div id="rectangle"></div>
+
+<p><img src="filip_icon_bw_round.png" id="avatar"></p>
 
 <h1>Filip Goč</h1>
 
@@ -772,14 +784,10 @@ Lead an international community of ~40 volunteers to manage a vibrant community 
 <dt>Education Design Shop, MIT</dt>
 <dd><em>Co-Organizer</em>
 <strong>2014</strong>
-Together with EDS founder Jess, developed and ran a 2-day hackathon in design thinking that put together educators, students, policy makers, and designers to design educational policy. Co-designed the website and print materials, shot video interviews with 'inspiring experts' (including the Massachusetts Secretary of Education, dr. Malone), developed scoring rubric, planned the activities... and anything else that was needed.<br><a href="http://edudesignshop.mit.edu">http://edudesignshop.mit.edu</a></dd>
-</dl>
+Together with EDS founder Jess, developed and ran a 2-day hackathon in design thinking that put together educators, students, policy makers, and designers to design educational policy. Co-designed the website and print materials, shot video interviews with 'inspiring experts' (including the Massachusetts Secretary of Education, dr. Malone), developed scoring rubric, planned the activities... and anything else that was needed.<br><a href="http://edudesignshop.mit.edu">http://edudesignshop.mit.edu</a>
+<!-- <div style="page-break-before: always"></div> -->
+<!-- ### Projects {#hideproj} --></dd>
 
-<p style="page-break-before: always"></p>
-
-<h3 id="projects">Projects</h3>
-
-<dl>
 <dt>HyperStudio at the Massachusetts Institute of Technology</dt>
 <dd><em>Research Intern to Visualize Digital Annotations</em>
 <strong>2013</strong>
