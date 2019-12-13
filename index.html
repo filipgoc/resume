@@ -250,13 +250,20 @@ body.pdf .container {
   background: none;
   border: none;
   border-width: 8px 0 2px 0;
-  text-align: left;
+  text-align: justify;
+}
+body.pdf blockquote {
+  text-align: right !important;
+  top: 0px;
+  right: 85px;
+  position: absolute;
+  font-size: 19px;
 }
 body.pdf .resume {
   position: relative;
-  padding: 40px 80px;
+  padding: 20px 80px 35px 70px;
 }
-body.pdf a[href$='.pdf'] {
+body.pdf a[href$=".pdf"] {
   display: none;
 }
 body.pdf h1,
@@ -268,8 +275,8 @@ body.pdf h4 {
 body.pdf h1 {
   letter-spacing: 0;
   margin-top: 0;
-  font-size: 48px;
   text-transform: uppercase;
+  font-size: 48px;
   font-weight: normal;
 }
 body.pdf h2 {
@@ -279,44 +286,48 @@ body.pdf h2 {
   font-weight: normal;
 }
 body.pdf h3 {
+  padding-top: 5px;
   float: left;
-  width: 16%;
+  width: 13%;
   font-style: normal;
 }
-body.pdf h3+p {
+body.pdf h3 + p {
   float: left;
-  width: 78%;
-  font-size: 200%;
+  width: 83%;
 }
-body.pdf blockquote {
-  top: 40px;
-  right: 50px;
-  position: absolute;
+body.pdf ul {
+  width: 83% !important;
+}
+body.pdf h3 + ul {
+  width: 83% !important;
 }
 body.pdf ul li {
   width: 33%;
   float: left;
+  text-align: left;
 }
 body.pdf ul dl {
   margin: 0;
   padding: 0.3em 0 0;
 }
 body.pdf ul dl dt {
+  font-size: 122%;
   font-weight: normal;
-  margin: 0 0 .75em;
+  margin: 0 0 0.4em;
 }
 body.pdf ul dl dd {
-  padding: 0 2em 0 0;
+  padding: 0 0 0 0;
   color: #212121;
 }
 body.pdf ol {
   float: left;
-  width: 79%;
-  margin: .7em 0 0;
+  width: 83%;
+  margin: 0.7em 0 0;
 }
 body.pdf ol li {
   width: 33%;
   margin: 0;
+  text-align: left;
 }
 body.pdf ol li:nth-child(3n) {
   width: 34%;
@@ -327,9 +338,9 @@ body.pdf ol li:nth-child(3) {
   border-top: none;
 }
 body.pdf dl {
-  margin: .7em 0 0;
+  margin: 0.7em 0 0;
   display: block;
-  width: 79%;
+  width: 83%;
   float: left;
 }
 body.pdf dl dd {
@@ -337,18 +348,19 @@ body.pdf dl dd {
 }
 body.pdf dl strong {
   float: right;
-  margin-top: -2em;
-  color: #212121;
+  color: #3a3a3a;
+  font-style: italic;
+  font-size: 80%;
 }
 body.pdf dl em {
-  font-size: 200%;
+  font-size: 130%;
   font-style: normal;
   color: #212121;
+  font-stretch: expanded;
 }
-body.pdf ul+p,
-body.pdf dl+p,
-body.pdf dt+p {
-  font-size: 200%;
+body.pdf #footer {
+  position: absolute;
+  bottom: 0;
 }
 body.pdf h3#languages {
   visibility: hidden;
@@ -356,19 +368,37 @@ body.pdf h3#languages {
 body.pdf h3#hideproj {
   visibility: hidden;
 }
-body.pdf img#avatar {
-  max-width: 10%;
+body.pdf img#avatar-pdf {
+  width: 100px;
   float: left;
-  border: 7px solid white;
+  border: 0px solid white;
   border-radius: 100px;
-  margin-left: 1%;
+  margin-left: 0px;
+}
+body.pdf #avatar {
+  display: none;
 }
 body.pdf h1,
 body.pdf h2 {
-  margin-left: 20%;
+  margin-left: 173px;
 }
-body.pdf p {
-  font-size: 300%;
+body.pdf h3 + p {
+  font-size: 20px !important;
+}
+body.pdf dl dt {
+  font-size: 150% !important;
+}
+body.pdf dl em {
+  font-size: 115% !important;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin: 0.3em 0 0.4em;
+}
+body.pdf dl dd {
+  font-size: 125% !important;
+}
+body.pdf dl strong {
+  margin-top: -4.4em;
 }
 
 .clearfix {
@@ -381,6 +411,9 @@ body.pdf p {
   clear: both;
   content: ".";
 }
+#avatar-pdf {
+  display: none;
+}
 h3#languages {
   visibility: hidden;
 }
@@ -388,14 +421,15 @@ h3#hideproj {
   visibility: hidden;
 }
 img#avatar {
-  max-width: 10%;
+  max-width: 11%;
   float: left;
   border: 7px solid white;
   border-radius: 100px;
-  margin-left: 1%;
+  margin-left: 2%;
+  margin-top: -12px;
 }
 body {
-  font-family: 'Hoefler Text', Times New Roman, Times, serif;
+  font-family: Hoefler Text;
   color: #444;
 }
 h1,
@@ -431,8 +465,10 @@ a[href$='.pdf'] {
 }
 blockquote {
   margin: 0;
+  margin-top: -17px;
   padding: 0;
   line-height: 1.4em;
+  font-size: 17px;
 }
 hr {
   display: block;
@@ -475,11 +511,11 @@ h3 {
   font-weight: normal;
 }
 h3+p {
-  margin: .6em 0 16px;
+  margin: .4em 0 16px;
   padding: 0;
   display: block;
-  font-size: 100%;
-  line-height: 24px;
+  font-size: 120%;
+  line-height: 28px;
 }
 ul {
   margin: 0;
@@ -500,9 +536,9 @@ ul dl dt {
   font-size: 100%;
 }
 ul dl dd {
-  margin: 0 0 1em;
+  margin: 0 0 1em -0.2em;
   padding: 0 2em 0 0;
-  font-size: .9em;
+  font-size: 1.1em;
   line-height: 1.5em;
 }
 ol {
@@ -531,34 +567,42 @@ dl {
   padding: 0;
 }
 dl dt {
-  margin: 0;
+  margin: -0.2em;
   padding: 0;
   font-size: 140%;
-}
-dl dd {
-  margin: 0 0 1.5em;
-  padding: 0;
-  font-size: 90%;
-  line-height: 1.4em;
-}
-dl strong {
-  display: block;
-  font-weight: 600;
-  text-align: right;
+  font-family: Futura;
 }
 dl em {
   display: block;
-  font-size: 110%;
-  margin: .15em 0 .5em;
-  font-style: bold;
+  font-size: 80%;
+  margin: .3em 0em .4em 0em;
+  font-family: Futura;
+  font-weight: 1000;
+}
+dl strong {
+  display: block;
+  font-style: italic;
+  font-weight: 300;
+  text-align: right;
+  font-family: Futura;
+  font-size: 70%;
+  margin-top: -4.5em;
+}
+dl dd {
+  margin: 0 0 1.5em -0.2em;
+  padding: 0;
+  display: block;
+  font-size: 120%;
+  line-height: 1.5em;
 }
 #footer {
   display: none;
 }
 #footer + p {
   width: 100%;
-  font-size: 11px;
+  font-size: 22px;
   text-align: center;
+  padding-left: 70px;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -587,7 +631,7 @@ dl em {
 }
 @media screen and (min-width: 57em) {
   .container {
-    width: 912px;
+    width: 1024px;
   }
   .resume {
     position: relative;
@@ -651,13 +695,12 @@ dl em {
   dl {
     margin: .5em 0 0;
   }
+  dl em {
+    font-size: 110%;
+  }
   dl strong {
     float: right;
-    margin-top: -2em;
-  }
-  dl em {
-    font-size: 130%;
-    font-style: normal;
+    margin-top: -5em;
   }
 }
 
@@ -668,9 +711,12 @@ dl em {
 
 <div class="container">
     <div class="resume">
-        <div id="rectangle"></div>
+        <p><head>
+<link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,400i&display=swap" rel="stylesheet"></p>
 
-<p><img src="filip_icon_bw_round.png" id="avatar"></p>
+<p></head>
+<img src="filip_icon_bw_round.png" id="avatar">
+<!-- <img src="filip_icon_bw_banner.png" id="avatar-pdf"> --></p>
 
 <h1>Filip Goč</h1>
 
@@ -682,18 +728,21 @@ dl em {
     <!-- > <a href="mailto:filip@imade3d.com">filip@imade3d.com</a><br> -->
     <!-- > html below -->
   <a href="">filip@imade3d.com</a><br>
+  <a href="https://twitter.com/filipgoc">@filipgoc on Twitter</a><br>
   <a href="https://www.linkedin.com/in/filipgoc">linkedin.com/in/filipgoc</a><br>
-  <a href="http://twitter.com/filipgoc">@filipgoc on Twitter</a></p>
+    <!-- TURN ON FOR PDF PDF PDF PDF PDF PDF PDF PDF -->
+    <!-- > [filipgoc.github.io/resume](https://filipgoc.github.io/resume/) --></p>
 </blockquote>
 
 <div style="margin-top:40px"></div>
 
 <hr />
 
-<h3 id="profile">Intro</h3>
+<h3 id="profile">About me</h3>
 
-<p>I design and run learning experiences and curricula often involving modern technologies both on-line and off-line. I have also designed an award-winning 3D Printer. My approaches are steeped in cognitive science of learning, design thinking, game-inspired learning, and both constructionist and constructivist theories. I believe in curiosity, combining liberal arts with digital fabrication, and open-ended, student-centered education.<br><br>
-  I am DIY aficionado and a tinkerer, both as a professional and as a hobbyist. I like the smell of freshly cut wood and of ink laid on a paper, yet, most of the time, I make digital things. Digital photography, movie editing, sound recording, and the like. I sometimes play with code, and it may or may not end up online.</p>
+<p>I create modern <em>learning experiences</em>, be it online classes, in-person workshops or professional development courses. I designed an award-winning 3D Printer, taught in classrooms and ran hand-on workshops and MOOCs. I am a tinkerer and a DIY aficionado. I cherish the smell of freshly cut wood, but I am at home making things digital.
+<br><br>My approaches are steeped in cognitive sciences, design thinking, game-inspired learning, and both constructionist and constructivist approaches. I believe in curiosity, combining liberal arts with digital fabrication, and open-ended, learner-centered instruction.
+<!-- <br><br>Shoot me a message if you'd like to collaborate on a project or if you'd like to ask me something. --></p>
 
 <hr />
 
@@ -710,7 +759,7 @@ dl em {
 </dl></li>
 <li><dl>
 <dt>"Making"</dt>
-<dd>3D Printer Development, RepRap, Slicing Development (Simplify3D, Cura, Clic3r, Kiri:moto), CAD (Fusion360, TinkrCAD, OpenSCAD, 123D Suite, Onshape), Arduino (-Marlin), lasercutting, CNC, lathe, Git...</dd>
+<dd>3D Printer Development, RepRap, Slicing Development (Simplify3D, Cura, Slic3r), CAD (Fusion360, TinkrCAD, OpenSCAD, Onshape), Arduino (Marlin), lasercutting, CNC, lathe, Git.</dd>
 </dl></li>
 </ul>
 
@@ -719,11 +768,11 @@ dl em {
 <ul>
 <li><dl>
 <dt>English</dt>
-<dd>Native-like with a soft spot for precision and clarity</dd>
+<dd>Native-like with a penchant for crystal clear writing</dd>
 </dl></li>
 <li><dl>
 <dt>Czech</dt>
-<dd>Native with a soft spot for archaic and unusual phrases</dd>
+<dd>Native with a taste for archaic and unusual phrases</dd>
 </dl></li>
 <li><dl>
 <dt>French</dt>
@@ -751,7 +800,7 @@ dl em {
 <dt>Harvard Graduate School of Education</dt>
 <dd><em>Master of Education: Technology, Innovation, and Education</em>
 <strong>2012-2013</strong>
-Associate of Student Advisory Board | Winner of Harvard XDesign Education Challenge</dd>
+Associate of Student Advisory Board | Winner of Harvard X Design Education Challenge</dd>
 
 <dt>University of Virginia</dt>
 <dd><em>Bachelor of Arts in Cognitive Sciences</em>
@@ -764,73 +813,63 @@ Focus in Digital Humanities, New Media, and Cognitive Psychology | Dean’s List
 Presidential Scholar and Dean’s List | Award of High Academic Achievement</dd>
 </dl>
 
+<hr />
+
 <!-- <p style="page-break-before: always"></p> -->
-
-<hr />
-
-<h3 id="projects">Projects</h3>
-
-<dl>
-<dt>IMADE3D, LLC</dt>
-<dd><em>Captain of Design and Education</em>
-<strong>2015-present</strong>
-Co-founded a startup to teach general public, teachers, and students to assemble and use DIY 3D Printers - as a learning experience. Co-designed 3D Printer "JellyBOX" from scratch, optimizing the design for ease of assembly, maintenance and learning. I modeled the design in Fusion360, AutoCAD, and Illustrator, and collaborated on setting up manufacturing in rural Virginia. I also developed the IMADE3D educational concept of Hands-on Builds, created a DIY online documentation (Dozuki, Docsify,Discourse), shot and edited instructional videos, designed and administered our web, interfaced with partners, and managed the online community. JellyBOX has been awarded "Best for Schools" by Make Magazine in 2017 and 2019.<br><a href="www.imade3d.com">www.imade3d.com</a></dd>
-
-<dt>Design 101 MOOC, Iversity</dt>
-<dd><em>Community Meta-Manager and Lead</em>
-<strong>2014</strong>
-Lead an international community of ~40 volunteers to manage a vibrant community of 40,000 students (about 10,000 active) in Iversity's Design 101 MOOC. Imagined and spearheaded ways to make this technologically and humanly possible. Heavily experimented with social and communication media (Facebook, Twitter, Pinterest, Google+, Hangouts, Slack, forum, email...) to keep the students engaged.<br><a href="http://iversity.org/en/courses/design-101-or-design-basics">http://iversity.org/en/courses/design-101-or-design-basics</a></dd>
-
-<dt>Education Design Shop, MIT</dt>
-<dd><em>Co-Organizer</em>
-<strong>2014</strong>
-Together with EDS founder Jess, developed and ran a 2-day hackathon in design thinking that put together educators, students, policy makers, and designers to design educational policy. Co-designed the website and print materials, shot video interviews with 'inspiring experts' (including the Massachusetts Secretary of Education, dr. Malone), developed scoring rubric, planned the activities... and anything else that was needed.<br><a href="http://edudesignshop.mit.edu">http://edudesignshop.mit.edu</a>
-<!-- <div style="page-break-before: always"></div> -->
-<!-- ### Projects {#hideproj} --></dd>
-
-<dt>HyperStudio at the Massachusetts Institute of Technology</dt>
-<dd><em>Research Intern to Visualize Digital Annotations</em>
-<strong>2013</strong>
-In collaboration with HyperStudio, designed and coded interactive visualizations of users' paths through the readings with Processing and D3.js, using annotation data from HyperStudio's Annotation studio. Additionally, built a case study to optimize the UX and streamline the website. Presented these stories on "Temporal Aspect of Annotating" at "Convergence @Harvard" conference.</dd>
-</dl>
-
-<hr />
 
 <h3 id="experience">Experience</h3>
 
 <dl>
-<dt>Emerson College School of Communication</dt>
+<dt>IMADE3D, LLC (USA)</dt>
+<dd><em>Co-Creator; Captain of Design and Education</em>
+<strong>2015-present</strong>
+Co-founded a startup to teach general public, teachers, and students to assemble and use DIY 3D Printers as a learning experience. Used design thinking and learning theories to create the award-winning educational 3D Printer "JellyBOX" (modeled in (Fusion360, AutoCAD, Illustrator). JellyBOX has been awarded "Best for Schools" by Make Magazine in 2017 and 2019. I also developed the IMADE3D educational concept of Hands-on Builds, created an online documentation (Dozuki, Docsify, Discourse, Github Pages), shot and edited instructional videos (Premiere Pro), customized forks of open source firmware and software (Arduino-Marlin and Cura), designed and administered the website (Wordpress), managed e-shop (Magento 2), and oversaw the online community.<br><a href="www.imade3d.com">www.imade3d.com</a></dd>
+
+<dt><!-- TURN ON FOR PDF: --></dt>
+<dt><!-- ### Experience {#experience} --></dt>
+<dt><!--  --></dt>
+<dt>Avenues the World School (online, China)</dt>
+<dd><em>3D Printer Design and Learning Process Advisor</em>
+<strong>2019</strong>
+Supported a group of international high school students through designing and building their own 3D printers; provided design critiques and guidance in both physical and software aspects of the design process.</dd>
+
+<dt>HEP Haute École Pédagogique (Switzerland)</dt>
+<dd><em>Instructor of 2D and 3D Computer-Aided Design</em>
+<strong>2018</strong>
+Developed and taught two year-long professional development courses (a part of the PIRACEF program) to groups of about 15 students. One course was on 2D CAD (using Illustrator and Inkscape), and the second was on 3D CAD (using Fusion 360). Created a github pages based course website with pre-recorded design walkthroughs.</dd>
+
+<dt>Emerson College School of Communication (USA)</dt>
 <dd><em>Human-Centered Design Facilitator &amp; Senior Project Manager</em>
 <strong>2013-2015</strong>
 Over the course of a year, lead a cross-departmental, diverse group of faculty to re-thing and re-align the structure and programming of the entire School of Communication in the spirit of design thinking. Analysed the ed-tech space, and provided resources and activities to have the faculty explore and experience current communication and educational technology trends. Designed and managed online spaces to share findings and interact asynchronously. Run an internal mini-conference on technological trends including a design thinking workshop.</dd>
 
-<dt>Emerson College</dt>
-<dd><em>Teaching Assistant for Communication Management</em>
+<dt>Emerson College (USA)</dt>
+<dd><em>Teaching Assistant for Communication Management Course</em>
 <strong>2015</strong>
 Provided feedback and guidance on graduate students' final year's Communication Management projects. Managed class's Canvas site including forum and submissions and google docs integrations. Secured video recordings of sessions, and provided general IT support. Led classes on various subjects.</dd>
 
-<dt>HarvardX (Harvard branch of EdX)</dt>
-<dd><em>Comparative MOOC-ologist</em>
+<dt>HarvardX = Harvard branch of EdX (USA)</dt>
+<dd><em>MOOC Researcher</em>
 <strong>2014</strong>
-A part of a team assembled to compare and contrast MOOC courses from various providers, and identify the best course design and community management practices. Produced an internal document outlining the state of the art and proposing innovative approaches to teaching online across disciplines.</dd>
+A part of a team assembled to compare and contrast MOOC courses from various providers to identify the best course design and community management practices. Produced an internal document outlining the state of the art and proposing innovative approaches to teaching online across disciplines.</dd>
 
-<dt>University of Liverpool Laureate Online Courses</dt>
+<dt>University of Liverpool Online Courses (UK)</dt>
 <dd><em>Instructional Designer &amp; Curriculum Writer</em>
 <strong>2013-2014</strong>
 Worked with an international team of content experts to re-design and re-write existing online courses in an MBA program to fit into a new school-wide pedagogical model aimed at increasing interactivity and students’ collaboration.</dd>
 
-<dt>HFR Veritas Education</dt>
+<dt>HFR Veritas Education (China)</dt>
 <dd><em>Curriculum Designer and Content Expert</em>
 <strong>2014</strong>
 Co-created curricula for after-school programs in Creative Problem Solving and Critical thinking for a local start-up in Shanghai, China. Reviewed and compiled existing literature and trends in teaching creativity. Spearheaded human-centered design practices in developing the coursework - held multiple sessions with a selection of future Chinese students to test activities and align the curriculum with the needs and expectations of the regional audience. Delivered both instructional activities for students, and teaching manual for instructors.</dd>
 
-<dt>Center for Talented Youth of Johns Hopkins University</dt>
+<dt>Center for Talented Youth of Johns Hopkins University (USA)</dt>
 <dd><em>Teaching Assistant of Cognitive Psychology</em>
 <strong>2011–2012</strong>
 <!-- Los Angeles, CA Jul-Aug 2011 and 2012 -->
 Prepared and taught college level lessons on various topics of Cognitive Psychology to class of 15 gifted teenagers. Supervised students’ learning with an interactive suite of cognitive psychology experiments. Supplied students with lab report templates and critical thinking question, and provided constructive feedback on performance.</dd>
 
-<dt>Northern Virginia Community College Writing Center</dt>
+<dt>Northern Virginia Community College (USA)</dt>
 <dd><em>ESOL and English Writing Tutor</em>
 <strong>2010</strong>
 <!-- Annandale, VA Jan 2010-May 2010 -->
@@ -839,9 +878,36 @@ Held one-on-one tutoring sessions with college students of all English proficien
 
 <hr />
 
+<p><!-- <div style="page-break-before: always"></div> -->
+<!-- ### Projects {#hideproj} --></p>
+
+<h3 id="proj">Projects</h3>
+
+<dl>
+<dt>Design 101 MOOC, Iversity (online)</dt>
+<dd><em>Community Meta-Manager and Lead</em>
+<strong>2014</strong>
+Lead an international community of ~40 volunteers to manage a vibrant community of 40,000 students (about 10,000 active) in Iversity's Design 101 MOOC. Imagined and spearheaded ways to make this technologically and humanly possible. Heavily experimented with social and communication media (Facebook, Twitter, Pinterest, Google+, Hangouts, Slack, forum, email...) to keep the students engaged.<br><a href="http://iversity.org/en/courses/design-101-or-design-basics">http://iversity.org/en/courses/design-101-or-design-basics</a></dd>
+
+<dt>Education Design Shop at MIT (USA)</dt>
+<dd><em>Co-Organizer</em>
+<strong>2014</strong>
+Together with the founder Jess, developed and ran a 2-day hackathon in Design Thinking for Educational Policy for educators, students, policy makers, and designers at the Massachusetts Institute of Technology. Co-designed the website and print materials, shot video interviews with 'inspiring experts' (including the Massachusetts Secretary of Education, dr. Malone), developed scoring rubric, planned the activities... and anything else that was needed.<br><a href="http://edudesignshop.mit.edu">http://edudesignshop.mit.edu</a></dd>
+
+<dt>HyperStudio at MIT (USA)</dt>
+<dd><em>Digital Annotation Data Visualizations Designer</em>
+<strong>2013</strong>
+HyperStudio is a digital humanities lab at the Massachusetts Institute of Technology. I used annotation data from HyperStudio's Annotation Studio to design and code interactive visualizations of users' reading paths using Processing and D3.js. Additionally, I built a user case study to streamline the UX and UI of the web app Also presented the work under the title "Temporal Aspect of Annotating" at "Convergence @Harvard" conference.</dd>
+</dl>
+
+<hr />
+
 <h3 id="footer">Footer</h3>
 
-<p>Filip Goč  -- <a href="filip@imade3d.com">filip@imade3d.com</a> -- +1 202 560 0358</p>
+<p><!-- PDF version -->
+<em>Filip Goč</em> ▨ <a href="filip@imade3d.com"><em>filip@imade3d.com</em></a> ▨ <em>+1 202 643 4547</em>
+<!-- ONLINE version -->
+<!-- _Filip Goč_ ▨ [_filip@imade3d.com_](filip@imade3d.com) ▨ [_linkedin.com/in/filipgoc_](https://www.linkedin.com/in/filipgoc) ▨ [_@filipgoc on Twitter_](https://twitter.com/filipgoc)<br> --></p>
 
 <hr />
 
